@@ -1,38 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 27 27% 11%;
+    --foreground: 120 100% 40%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 27 38% 8%;
+    --card-foreground: 120 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 27 38% 8%;
+    --popover-foreground: 120 100% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 40%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 100% 27%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 27 38% 15%;
+    --muted-foreground: 120 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 27 38% 20%;
+    --input: 27 38% 15%;
+    --ring: 120 100% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,5 +99,40 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Orbitron", monospace;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+@layer components {
+  .minecraft-button {
+    @apply relative bg-minecraft-green border-4 border-t-white border-l-white border-r-minecraft-darkBrown border-b-minecraft-darkBrown px-6 py-3 text-black font-bold uppercase tracking-wider hover:bg-opacity-90 active:border-t-minecraft-darkBrown active:border-l-minecraft-darkBrown active:border-r-white active:border-b-white transform hover:scale-105 transition-all duration-100;
+    font-family: "Orbitron", monospace;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:
+      inset -2px -2px 0px rgba(0, 0, 0, 0.3),
+      inset 2px 2px 0px rgba(255, 255, 255, 0.3);
+  }
+
+  .minecraft-card {
+    @apply bg-minecraft-stone border-4 border-t-gray-400 border-l-gray-400 border-r-black border-b-black p-6 relative;
+    box-shadow:
+      inset -2px -2px 0px rgba(0, 0, 0, 0.5),
+      inset 2px 2px 0px rgba(255, 255, 255, 0.2);
+  }
+
+  .pixel-font {
+    font-family: "Orbitron", monospace;
+    font-weight: 700;
+    text-rendering: optimizeSpeed;
+  }
+
+  .minecraft-nav {
+    @apply bg-minecraft-brown border-4 border-t-amber-200 border-l-amber-200 border-r-amber-900 border-b-amber-900;
+    box-shadow:
+      inset -2px -2px 0px rgba(0, 0, 0, 0.4),
+      inset 2px 2px 0px rgba(255, 255, 255, 0.2);
   }
 }

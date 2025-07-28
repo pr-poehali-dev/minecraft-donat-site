@@ -61,6 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				minecraft: {
+					green: '#4CAF50',
+					brown: '#8B4513',
+					darkBrown: '#5F2F0C',
+					stone: '#2C2C2C',
+					orange: '#FF6B35',
+					gold: '#FFD700',
+					diamond: '#00FFFF',
+					emerald: '#00FF00'
 				}
 			},
 			borderRadius: {
